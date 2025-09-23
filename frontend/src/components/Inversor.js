@@ -46,7 +46,6 @@ function Inversor() {
     <div className="inversor-container">
       <h2>Inversor de Texto</h2>
       <p>Digite seu texto para invertê-lo.</p>
-      <p style={{fontSize: '12px', color: '#666'}}>API: {API_URL}</p> {/* Debug */}
 
       <textarea
         className="input-area"
