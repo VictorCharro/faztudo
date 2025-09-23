@@ -2,17 +2,17 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-# Copia os arquivos do projeto
+# Copia todos os arquivos
 COPY . .
 
-# Se usar Maven
-RUN ./mvnw clean package -DskipTests
+# Da permissão de execução para o mvnw
+RUN chmod +x ./mvnw
 
-# Ou se usar Gradle
-# RUN ./gradlew build -x test
+# Compila o projeto
+RUN ./mvnw clean package -DskipTests
 
 # Expõe a porta
 EXPOSE 10000
 
-# Comando para rodar
-CMD ["java", "-jar", "target/*.jar"]
+# Comando para rodar (ajustado para encontrar o .jar)
+CMD ["sh", "-c", "java -jar target/*.jar"]
