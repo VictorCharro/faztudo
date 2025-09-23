@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-// Importe o componente Inversor de Texto
 import Inversor from './components/Inversor';
 import Contador from './components/Contador';
+import GeradorQrCode from './components/GeradorQrCode';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/inversor" element={<Inversor />} />
             <Route path="/contador" element={<Contador />} />
+            <Route path="/geradorqrcode" element={<GeradorQrCode />} />
             <Route
                 path="/"
                 element={
@@ -33,6 +34,9 @@ function App() {
                                 </li>
                                 <li>
                                     <Link to="/contador" className="button-link">Contador de Pontos</Link>
+                                </li>
+                                <li>
+                                    <Link to="/geradorqrcode" className="button-link">Gerador de QR Code</Link>
                                 </li>
                             </ul>
                         </nav>

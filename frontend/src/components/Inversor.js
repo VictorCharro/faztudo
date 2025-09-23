@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Inversor.css';
 
-// Fallback caso a variável de ambiente não esteja definida
 const API_URL = process.env.REACT_APP_API_URL ||
   (process.env.NODE_ENV === 'production'
     ? 'https://faztudo.onrender.com'
