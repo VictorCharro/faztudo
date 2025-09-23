@@ -1,0 +1,97 @@
+.contador-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.times-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas pequenas */
+}
+
+.time {
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Permite que os times ocupem o espaço disponível */
+    margin: 10px;
+    text-align: center;
+}
+
+.time.vermelho {
+    background-color: #ffebee;
+    border: 2px solid #ef5350;
+    color: #ef5350;
+}
+
+.time.azul {
+    background-color: #e3f2fd;
+    border: 2px solid #42a5f5;
+    color: #42a5f5;
+}
+
+.pontos {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.botoes-acao {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botoes-acao button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-somar {
+    background-color: #66bb6a;
+    color: white;
+}
+
+.botao-somar:hover {
+    background-color: #43a047;
+}
+
+.botao-diminuir {
+    background-color: #ef5350;
+    color: white;
+}
+
+.botao-diminuir:hover {
+    background-color: #d32f2f;
+}
+
+.botoes-reset {
+    margin-top: 30px;
+}
+
+.botao-reset {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #9e9e9e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-reset:hover {
+    background-color: #757575;
+}

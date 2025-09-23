@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App-header-custom {
+  background-color: #282c34;
+  padding: 5px;
+  color: white;
+  text-align: center;
+}
+
+.App-header-custom a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: white; /* Mantém a cor do texto branca */
+  font-size: 25px;
+}
+
+/* Opcional: Adiciona um efeito sutil ao passar o mouse */
+.App-header-custom a:hover {
+  opacity: 0.8;
+}
+
+.App-nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.App-nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.App-nav-list a:hover {
+  color: #61dafb;
+}
+
+.App-main-content {
+  padding: 20px;
+}
+
+.App-nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza a lista */
+    gap: 15px; /* Espaço entre os botões */
+}
+
+.button-link,
+.button-link:link,
+.button-link:visited {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo quando o mouse passar por cima */
+.button-link:hover {
+    background-color: #007bff;
+    transform: translateY(-2px);
+    color: white;
+}
