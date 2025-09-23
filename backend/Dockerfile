@@ -1,29 +1,32 @@
-FROM maven:3.8.6-openjdk-17-slim AS build
+FROM eclipse-temurin:17-jdk-alpine AS build
 
 WORKDIR /app
 
-# Copia apenas o essencial
+# Instala Maven
+RUN apk add --no-cache maven
+
+# Copia arquivos do Maven
 COPY pom.xml .
-COPY src/main/java src/main/java
 
-# Cria um application.properties básico para produção
-RUN mkdir -p src/main/resources && \
-    echo "server.port=\${PORT:10000}" > src/main/resources/application.properties && \
-    echo "spring.profiles.active=prod" >> src/main/resources/application.properties
+# Baixa dependências
+RUN mvn dependency:go-offline -B || true
 
-# Compila o projeto
+# Copia código fonte
+COPY src ./src
+
+# Compila
 RUN mvn clean package -DskipTests
 
-# Segunda etapa - runtime
-FROM openjdk:17-jdk-slim
+# Runtime stage
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
-# Copia o JAR
+# Copia o JAR compilado
 COPY --from=build /app/target/*.jar app.jar
 
-# Expõe a porta
+# Expõe porta
 EXPOSE 10000
 
-# Comando para rodar
+# Comando
 CMD ["java", "-jar", "app.jar"]
