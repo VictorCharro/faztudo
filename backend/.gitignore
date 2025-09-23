@@ -31,3 +31,16 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Dependências Frontend
+node_modules/
+frontend/node_modules/
+
+# Arquivos de ambiente local
+frontend/.env.local
+backend/src/main/resources/application-local.properties
+
+# Arquivos temporários
+*.log
+.DS_Store
+Thumbs.db

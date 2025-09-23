@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import './Inversor.css';
 
-const API_URL = process.env.REACT_APP_API_URL;
+// Fallback caso a variável de ambiente não esteja definida
+const API_URL = process.env.REACT_APP_API_URL ||
+  (process.env.NODE_ENV === 'production'
+    ? 'https://faztudo.onrender.com'
+    : 'http://localhost:8080');
 
 function Inversor() {
   const [inputText, setInputText] = useState('');
@@ -12,6 +16,8 @@ function Inversor() {
   const handleInvert = async () => {
     setLoading(true);
     setError(null);
+    console.log('Fazendo requisição para:', `${API_URL}/invertertexto`); // Debug
+
     try {
       const response = await fetch(`${API_URL}/invertertexto`, {
         method: 'POST',
@@ -22,17 +28,15 @@ function Inversor() {
       });
 
       if (!response.ok) {
-        throw new Error('Erro ao inverter o texto. Tente novamente.');
+        throw new Error(`Erro ${response.status}: ${response.statusText}`);
       }
 
-      // Converte a resposta JSON
       const data = await response.json();
-
-      // Atualiza o estado com o texto invertido
       setOutputText(data.textoInvertido);
 
     } catch (err) {
-      setError(err.message);
+      console.error('Erro na requisição:', err);
+      setError(`Erro ao conectar com o servidor: ${err.message}`);
     } finally {
       setLoading(false);
     }
@@ -42,6 +46,8 @@ function Inversor() {
     <div className="inversor-container">
       <h2>Inversor de Texto</h2>
       <p>Digite seu texto para invertê-lo.</p>
+      <p style={{fontSize: '12px', color: '#666'}}>API: {API_URL}</p> {/* Debug */}
+
       <textarea
         className="input-area"
         value={inputText}
