@@ -1,0 +1,55 @@
+.sorteador-container {
+  display: flex;        /* linha única */
+  gap: 40px;            /* espaço entre os dois blocos */
+  justify-content: center;
+}
+
+.sorteador-bloco {
+  display: flex;        /* label + input juntos */
+  align-items: center;  /* alinhar label e input */
+  justify-content: center;
+  gap: 10px;             /* espaço pequeno entre label e input */
+}
+
+
+input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    margin: 30px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #5d9cec;
+    box-shadow: 0 0 5px #5d9cec;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #5d9cec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #4a8ad8;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32;
+}

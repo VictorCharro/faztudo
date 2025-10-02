@@ -5,15 +5,16 @@ import './App.css';
 import Inversor from './components/Inversor';
 import Contador from './components/Contador';
 import GeradorQrCode from './components/GeradorQrCode';
+import SorteadorDeNumero from './components/SorteadorDeNumero';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header-custom">
-        <Link to="/">
-          <h1>Faz Tudo</h1>
-        </Link>
+          <Link to="/">
+            <h1>Faz Tudo</h1>
+          </Link>
         </header>
 
         <main className="App-main-content">
@@ -21,27 +22,31 @@ function App() {
             <Route path="/inversor" element={<Inversor />} />
             <Route path="/contador" element={<Contador />} />
             <Route path="/geradorqrcode" element={<GeradorQrCode />} />
+            <Route path="/sorteadordenumero" element={<SorteadorDeNumero />} />
             <Route
-                path="/"
-                element={
-                    <div>
-                        <h2>Bem-vindo ao Faz Tudo!</h2>
-                        <p>Escolha uma ferramenta no menu para começar.</p>
-                        <nav>
-                            <ul className="App-nav-list">
-                                <li>
-                                    <Link to="/inversor" className="button-link">Inversor de Texto</Link>
-                                </li>
-                                <li>
-                                    <Link to="/contador" className="button-link">Contador de Pontos</Link>
-                                </li>
-                                <li>
-                                    <Link to="/geradorqrcode" className="button-link">Gerador de QR Code</Link>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                }
+              path="/"
+              element={
+                <div>
+                  <h2>Bem-vindo ao Faz Tudo!</h2>
+                  <p>Escolha uma ferramenta no menu para começar.</p>
+                  <nav>
+                    <ul className="App-nav-list">
+                      <li>
+                        <Link to="/inversor" className="button-link">Inversor de Texto</Link>
+                      </li>
+                      <li>
+                        <Link to="/contador" className="button-link">Contador de Pontos</Link>
+                      </li>
+                      <li>
+                        <Link to="/geradorqrcode" className="button-link">Gerador de QR Code</Link>
+                      </li>
+                      <li>
+                        <Link to="/sorteadordenumero" className="button-link">Sorteador de Numeros</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              }
             />
           </Routes>
         </main>
