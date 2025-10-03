@@ -6,6 +6,7 @@ import Inversor from './components/Inversor';
 import Contador from './components/Contador';
 import GeradorQrCode from './components/GeradorQrCode';
 import SorteadorDeNumero from './components/SorteadorDeNumero';
+import GeradorSenha from './components/GeradorSenha';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contador" element={<Contador />} />
             <Route path="/geradorqrcode" element={<GeradorQrCode />} />
             <Route path="/sorteadordenumero" element={<SorteadorDeNumero />} />
+            <Route path="/geradorsenha" element={<GeradorSenha />} />
             <Route
               path="/"
               element={
@@ -42,6 +44,9 @@ function App() {
                       </li>
                       <li>
                         <Link to="/sorteadordenumero" className="button-link">Sorteador de Numeros</Link>
+                      </li>
+                      <li>
+                        <Link to="/geradorsenha" className="button-link">Gerador de Senhas</Link>
                       </li>
                     </ul>
                   </nav>

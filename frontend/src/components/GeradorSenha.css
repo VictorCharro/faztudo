@@ -1,0 +1,53 @@
+.checkbox-list {
+  list-style: none;        /* tira bolinhas */
+  padding: 0;              /* tira recuo padrão */
+  margin: 10px;          /* espaço vertical da lista */
+  display: flex;
+  flex-direction: row;  /* itens um abaixo do outro */
+  gap: 20px;               /* espaçamento entre cada item */
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-list li {
+  margin: 0;
+}
+
+.checkbox-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;                /* espaço entre checkbox e texto */
+  cursor: pointer;
+}
+
+.input-tamanho-senha {
+    width: 10%;
+    padding: 10px;
+    margin: 30px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
+
+.generated-password {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.result {
+    margin-top: 40px;
+}
+
+.generate-button{
+    margin-top: 30px;
+}
