@@ -18,6 +18,7 @@ function SorteadorDeNumero() {
                         type="number"
                         placeholder="Valor Mínimo"
                         value={valorMinimo}
+                        className="input-minimo"
                         onChange={(e) => setValorMinimo(e.target.value)}
                     />
                 </div>
@@ -28,6 +29,7 @@ function SorteadorDeNumero() {
                         type="number"
                         placeholder="Valor Máximo"
                         value={valorMaximo}
+                        className="input-maximo"
                         onChange={(e) => setValorMaximo(e.target.value)}
                     />
                 </div>
