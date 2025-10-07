@@ -1,0 +1,56 @@
+.calculadora-imc-container h2 {
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.input-peso-altura-imc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.input-peso-altura-imc label {
+  min-width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: #444;
+}
+
+.input-peso-altura-imc input {
+  width: 120px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  text-align: center;
+}
+
+.botao-calcular-imc {
+  padding: 10px 20px;
+  background-color: #5d9cec;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.botao-calcular-imc:hover {
+  background-color: #4a8ad8;
+}
+
+.resultado-imc {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+}

@@ -7,6 +7,7 @@ import Contador from './components/Contador';
 import GeradorQrCode from './components/GeradorQrCode';
 import SorteadorDeNumero from './components/SorteadorDeNumero';
 import GeradorSenha from './components/GeradorSenha';
+import CalculadoraIMC from './components/CalculadoraIMC';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/geradorqrcode" element={<GeradorQrCode />} />
             <Route path="/sorteadordenumero" element={<SorteadorDeNumero />} />
             <Route path="/geradorsenha" element={<GeradorSenha />} />
+            <Route path="/calculadoraimc" element={<CalculadoraIMC />} />
             <Route
               path="/"
               element={
@@ -47,6 +49,11 @@ function App() {
                       </li>
                       <li>
                         <Link to="/geradorsenha" className="button-link">Gerador de Senhas</Link>
+                      </li>
+                    </ul>
+                    <ul className="App-nav-list">
+                      <li>
+                        <Link to="/calculadoraimc" className="button-link">Calculadora de IMC</Link>
                       </li>
                     </ul>
                   </nav>
