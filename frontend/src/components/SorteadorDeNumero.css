@@ -1,55 +1,76 @@
 .sorteador-container {
-  display: flex;        /* linha única */
-  gap: 40px;            /* espaço entre os dois blocos */
-  justify-content: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  text-align: center;
+  margin-top: 30px;
+
+   background-color: #ffffff;   
+  padding: 30px 40px;          
+  border-radius: 12px;         
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 600px;            
+  margin-left: auto;
+  margin-right: auto;          
+}
+
+.sorteador-container p {
+  margin-bottom: 40px;
+  color: #000000;
 }
 
 .sorteador-bloco {
-  display: flex;        /* label + input juntos */
-  align-items: center;  /* alinhar label e input */
+  display: flex;
+  align-items: center;  
   justify-content: center;
-  gap: 10px;             /* espaço pequeno entre label e input */
+  gap: 10px;            
+  margin-bottom: 15px;  
 }
 
-
-.input-minimo, .input-maximo {
-    width: 50%;
-    padding: 10px;
-    margin: 30px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    text-align: center;
+.sorteador-bloco label {
+  font-weight: bold;
 }
 
-.input-minimo :focus, .input-maximo :focus {
-    outline: none;
-    border-color: #5d9cec;
-    box-shadow: 0 0 5px #5d9cec;
+.input-minimo,
+.input-maximo {
+  width: 200px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+.input-minimo:focus,
+.input-maximo:focus {
+  outline: none;
+  border-color: #5d9cec;
+  box-shadow: 0 0 5px #5d9cec;
 }
 
 button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    font-size: 16px;
-    background-color: #5d9cec;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #667EEA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-    background-color: #4a8ad8;
+  background-color: #4a8ad8;
 }
 
 .resultado {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #e8f5e9;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #2e7d32;
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #e8f5e9;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2e7d32;
 }

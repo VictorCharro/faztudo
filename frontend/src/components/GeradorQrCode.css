@@ -10,7 +10,7 @@
 }
 
 .qrcode-container h2 {
-    color: #333;
+    color: #667EEA;
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -52,7 +52,7 @@
 .gerar-botao {
     width: 100%;
     padding: 12px 20px;
-    background-color: #007bff;
+    background-color: #667EEA;
     color: white;
     border: none;
     border-radius: 8px;

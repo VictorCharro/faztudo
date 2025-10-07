@@ -63,7 +63,8 @@ function GeradorSenha() {
                         Incluir letras minúsculas
                     </label>
                 </li>
-
+</ul>
+<ul className="checkbox-list">
                 <li>
                     <label>
                         <input

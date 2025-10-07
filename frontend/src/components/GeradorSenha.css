@@ -1,53 +1,103 @@
-.checkbox-list {
-  list-style: none;        /* tira bolinhas */
-  padding: 0;              /* tira recuo padrão */
-  margin: 10px;          /* espaço vertical da lista */
+.gerador-senha-container {
   display: flex;
-  flex-direction: row;  /* itens um abaixo do outro */
-  gap: 20px;               /* espaçamento entre cada item */
-  justify-content: center;
-  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.checkbox-list li {
-  margin: 0;
+.gerador-senha-container h2 {
+  color: #667EEA;
+  margin-bottom: 25px;
 }
 
-.checkbox-list label {
+.input-group {
   display: flex;
   align-items: center;
-  gap: 8px;                /* espaço entre checkbox e texto */
-  cursor: pointer;
-}
-
-.input-tamanho-senha {
-    width: 10%;
-    padding: 10px;
-    margin: 30px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    text-align: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
 .input-group label {
-    margin-right: 10px;
+  font-weight: 500;
+  color: #444;
 }
 
-.generated-password {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #e8f5e9;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #2e7d32;
+.input-tamanho-senha {
+  width: 180px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.input-tamanho-senha:focus {
+  outline: none;
+  border-color: #5d9cec;
+  box-shadow: 0 0 5px #5d9cec;
+}
+
+.checkbox-list {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 15px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.checkbox-list label {
+  cursor: pointer;
+  color: #333;
+  font-size: 15px;
+}
+
+.checkbox-list input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.generate-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #667EEA;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-button:hover {
+  background-color: #4a8ad8;
 }
 
 .result {
-    margin-top: 40px;
+  margin-top: 30px;
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #2e7d32;
+  font-weight: bold;
 }
 
-.generate-button{
-    margin-top: 30px;
+.generated-password {
+  font-family: monospace;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #000;
+  word-break: break-all;
 }

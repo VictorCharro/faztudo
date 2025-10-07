@@ -7,11 +7,11 @@ function SorteadorDeNumero() {
     const [numeroSorteado, setNumeroSorteado] = useState(null);
 
     return (
-        <div>
+        <div className="sorteador-container">
             <h2>Sorteador de Números</h2>
             <p>Digite os valores mínimo e máximo para sortear um número:</p>
 
-            <div className="sorteador-container">
+            <div>
                 <div className="sorteador-bloco">
                     <label>Valor Mínimo:</label>
                     <input
