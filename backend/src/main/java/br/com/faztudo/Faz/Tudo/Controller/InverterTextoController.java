@@ -1,8 +1,8 @@
 package br.com.faztudo.Faz.Tudo.Controller;
 
-import br.com.faztudo.Faz.Tudo.Dtos.inverterTextoRequestDto;
-import br.com.faztudo.Faz.Tudo.Dtos.inverterTextoResponseDto;
-import br.com.faztudo.Faz.Tudo.Services.inverterTextoService;
+import br.com.faztudo.Faz.Tudo.Dtos.InverterTextoRequestDto;
+import br.com.faztudo.Faz.Tudo.Dtos.InverterTextoResponseDto;
+import br.com.faztudo.Faz.Tudo.Services.InverterTextoService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Data
 @RestController
 @CrossOrigin(origins = "*")
-public class inverterTextoController {
+public class InverterTextoController {
 
     @Autowired
-    private inverterTextoService inverterTextoService;
+    private InverterTextoService inverterTextoService;
 
     @PostMapping
-    public inverterTextoResponseDto inverter (@RequestBody inverterTextoRequestDto dto){
+    public InverterTextoResponseDto inverter (@RequestBody InverterTextoRequestDto dto){
         return inverterTextoService.inverterTexto(dto);
     }
 }

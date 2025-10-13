@@ -9,12 +9,12 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.io.ByteArrayInputStream;
 
 @Service
-public class geradorQrCodeService {
+public class GeradorQrCodeService {
 
     private final RestTemplate restTemplate;
     private final String token = "21977|58yEtjgJg1i2gCvOg1eutWQPn9hHvNyR";
 
-    public geradorQrCodeService(RestTemplate restTemplate) {
+    public GeradorQrCodeService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

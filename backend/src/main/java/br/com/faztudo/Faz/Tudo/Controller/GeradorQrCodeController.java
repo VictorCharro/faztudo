@@ -1,6 +1,6 @@
 package br.com.faztudo.Faz.Tudo.Controller;
 
-import br.com.faztudo.Faz.Tudo.Services.geradorQrCodeService;
+import br.com.faztudo.Faz.Tudo.Services.GeradorQrCodeService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/qrcode")
 @CrossOrigin(origins = "*")
 @Data
-public class geradorQrCodeController {
+public class GeradorQrCodeController {
 
     @Autowired
-    private geradorQrCodeService qrCodeService;
+    private GeradorQrCodeService qrCodeService;
 
     @GetMapping(produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<InputStreamResource> gerarQrCode(
