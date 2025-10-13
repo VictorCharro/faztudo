@@ -4,9 +4,9 @@ import './GeradorQrCode.css';
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080';
 
 function GeradorQrCode() {
-  const [text, setText] = useState(''); // Valor inicial para teste
-  const [scale, setScale] = useState('5'); // Valor inicial
-  const [errorLevel, setErrorLevel] = useState('L'); // Valor inicial
+  const [text, setText] = useState(''); 
+  const [scale, setScale] = useState('5'); 
+  const [errorLevel, setErrorLevel] = useState('L'); 
   const [foreground, setForeground] = useState('');
   const [background, setBackground] = useState('');
 
@@ -19,12 +19,10 @@ function GeradorQrCode() {
     setError(null);
     setQrCodeUrl(null);
 
-    // Limpar URLs anteriores para liberar memória
     if (qrCodeUrl) {
       URL.revokeObjectURL(qrCodeUrl);
     }
 
-    // Constrói a URL com os parâmetros corretos
     const url = new URL(`${API_URL}/qrcode`);
     url.searchParams.append('text', text);
     url.searchParams.append('scale', scale || '5');
@@ -65,7 +63,6 @@ function GeradorQrCode() {
     }
   };
 
-  // Limpar URLs quando o componente for desmontado
   React.useEffect(() => {
     return () => {
       if (qrCodeUrl) {

@@ -8,6 +8,7 @@ import GeradorQrCode from './components/GeradorQrCode';
 import SorteadorDeNumero from './components/SorteadorDeNumero';
 import GeradorSenha from './components/GeradorSenha';
 import CalculadoraIMC from './components/CalculadoraIMC';
+import ConversorDeMedidas from './components/ConversorDeMedidas';
 
 function App() {
   const tools = [
@@ -59,6 +60,14 @@ function App() {
         width="50"
         height="50" />
     },
+    {
+      path: "/conversordemedidas",
+      name: "Conversor de Medidas",
+      description: "Converta unidades de medida facilmente",
+      icon: <img src="https://img.icons8.com/?size=100&id=Umn21YWLNm0k&format=png&color=667eea" alt="Conversor Icon"
+        width="50"
+        height="50" />
+    }
   ];
 
   return (
@@ -80,6 +89,7 @@ function App() {
             <Route path="/sorteadordenumero" element={<SorteadorDeNumero />} />
             <Route path="/geradorsenha" element={<GeradorSenha />} />
             <Route path="/calculadoraimc" element={<CalculadoraIMC />} />
+            <Route path="/conversordemedidas" element={<ConversorDeMedidas />} />
             <Route
               path="/"
               element={
