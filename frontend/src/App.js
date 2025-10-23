@@ -9,6 +9,7 @@ import SorteadorDeNumero from './components/SorteadorDeNumero';
 import GeradorSenha from './components/GeradorSenha';
 import CalculadoraIMC from './components/CalculadoraIMC';
 import ConversorDeMedidas from './components/ConversorDeMedidas';
+import ChatIA from './components/ChatIA';
 
 function App() {
   const tools = [
@@ -67,6 +68,14 @@ function App() {
       icon: <img src="https://img.icons8.com/?size=100&id=Umn21YWLNm0k&format=png&color=667eea" alt="Conversor Icon"
         width="50"
         height="50" />
+    },
+    {
+      path: "/chatia",
+      name: "Chat IA",
+      description: "Converse com um assistente virtual inteligente",
+      icon: <img src="https://img.icons8.com/?size=100&id=5jpTi28s5yE1&format=png&color=667eea" alt="Conversor Icon"
+        width="50"
+        height="50" />
     }
   ];
 
@@ -90,11 +99,11 @@ function App() {
             <Route path="/geradorsenha" element={<GeradorSenha />} />
             <Route path="/calculadoraimc" element={<CalculadoraIMC />} />
             <Route path="/conversordemedidas" element={<ConversorDeMedidas />} />
+            <Route path="/chatia" element={<ChatIA />} />
             <Route
               path="/"
               element={
                 <div className="home-container">
-                  {/* Hero Section */}
                   <section className="hero-section">
                     <h3 className="hero-subtitle">
                       Acesse gratuitamente nossas ferramentas práticas e eficientes para facilitar seu dia a dia.
